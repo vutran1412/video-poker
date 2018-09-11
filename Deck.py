@@ -26,13 +26,13 @@ class Deck(object):
 
     # generate 52 cards
     def build(self):
-        for s in [  u"\N{BLACK SPADE SUIT}",
+        for suit in [  u"\N{BLACK SPADE SUIT}",
                     u"\N{BLACK HEART SUIT}",
                     u"\N{BLACK DIAMOND SUIT}",
                     u"\N{BLACK CLUB SUIT}",
                     ]:
-                    for r in range(1, 14):
-                        self.cards.append(Card(s, r))
+                    for rank in range(1, 14):
+                        self.cards.append(Card(suit, rank))
 
     # display all cards in the deck
     def show(self):
@@ -42,8 +42,8 @@ class Deck(object):
     # shuffle the deck
     def shuffle(self):
         for i in range(len(self.cards)-1, 0, -1):
-            r = random.randint(0, i)
-            self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
+            rand = random.randint(0, i)
+            self.cards[i], self.cards[rand] = self.cards[rand], self.cards[i]
 
     def draw(self):
         return self.cards.pop()
