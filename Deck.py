@@ -50,8 +50,6 @@ class Deck(object):
 
 
 
-#class Player(object)
 deck = Deck()
-#deck.show()
 deck.shuffle()
 deck.show()
