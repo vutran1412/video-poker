@@ -11,12 +11,12 @@ class Card:
                 u"\N{BLACK CLUB SUIT}",
     ]
 
-    def __init__(self, suit=0, rank=0):
-        self.suit = suit
+    def __init__(self, rank=0, suit=0):
         self.rank = rank
+        self.suit = suit
 
     def __str__(self):
         return "|{} {}|".format(Card.RANKS[self.rank], Card.SUITS[self.suit])
 
 
-print(Card(1, 2))
+
