@@ -1,19 +1,20 @@
 import random
 
+
 class Card(object):
     def __init__(self, suit, rank):
         self.suit = suit
         self.rank = rank
 
     def show(self):
-        if self.rank == 1:
-            rank = "Ace"
-        elif self.rank == 11:
+        if self.rank == 11:
             rank = "Jack"
         elif self.rank == 12:
             rank = "Queen"
         elif self.rank == 13:
             rank = "King"
+        elif self.rank == 14:
+            rank = "Ace"
         else:
             rank = self.rank
 
@@ -45,11 +46,16 @@ class Deck(object):
             rand = random.randint(0, i)
             self.cards[i], self.cards[rand] = self.cards[rand], self.cards[i]
 
+
     def draw(self):
         return self.cards.pop()
 
 
 
+
+
+
 deck = Deck()
 deck.shuffle()
-deck.show()
+card = deck.draw()
+card.show()
