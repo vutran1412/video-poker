@@ -20,4 +20,3 @@ class Card:
 
 
 print(Card(1, 2))
-
