@@ -9,7 +9,7 @@ def main():
     for i in range(5):
         player_1.add_cards(deck.draw())
     print(player_1)
-    player_1.credits = player_1.place_bet()
-    print(player_1)
     player_1.show_hand()
+
+
 main()

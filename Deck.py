@@ -1,11 +1,12 @@
 import random
 
+
 class Card(object):
     def __init__(self, suit, rank):
         self.suit = suit
         self.rank = rank
 
-    def show(self):
+    def __repr__(self):
         if self.rank == 11:
             rank = "J"
         elif self.rank == 12:
@@ -17,7 +18,8 @@ class Card(object):
         else:
             rank = self.rank
 
-        print("{} {}".format(rank, self.suit))
+        return "|{} {}|".format(rank, self.suit)
+
 
 
 class Deck(object):
@@ -27,11 +29,10 @@ class Deck(object):
 
     # generate 52 cards
     def build(self):
-        for suit in [  u"\N{BLACK SPADE SUIT}",
-                    u"\N{BLACK HEART SUIT}",
-                    u"\N{BLACK DIAMOND SUIT}",
-                    u"\N{BLACK CLUB SUIT}",
-                    ]:
+        for suit in [u"\N{BLACK SPADE SUIT}",
+                     u"\N{BLACK HEART SUIT}",
+                     u"\N{BLACK DIAMOND SUIT}",
+                     u"\N{BLACK CLUB SUIT}"]:
                     for rank in range(1, 14):
                         self.cards.append(Card(suit, rank))
 
@@ -50,7 +51,5 @@ class Deck(object):
         return self.cards.pop()
 
 
-
 deck = Deck()
 deck.shuffle()
-deck.show()

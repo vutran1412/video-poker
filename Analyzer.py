@@ -1,5 +1,6 @@
 from Deck import *
 
+
 """ This class will analyze player's hands and determine what type of hand the player has based on the card 
 combinations in the player's hands """
 
@@ -23,6 +24,7 @@ class Analyzer(object):
             # If the current high_card is less than the card in the iteration, assign it the new value
             elif high_card.rank < card.rank:
                 high_card = card
+
         # return the high_card
         return high_card
 
@@ -37,6 +39,7 @@ class Analyzer(object):
             # if we see more cards of the same rank, assign that value to counter
             if ranks.count(rank) > count:
                 count = ranks.count(rank)
+
         # return the count
         return count
 
@@ -70,9 +73,11 @@ class Analyzer(object):
         ranks = [card.rank for card in self.cards]
         # Sort all the ranks
         ranks.sort()
+
         # Length of the collection must be 5
         if not len(set(ranks)) == 5:
             return False
+
         else:
             # check if the number is a straight, since the collection is now ordered, the next index should
             # equal the current index plus one.
@@ -84,6 +89,7 @@ class Analyzer(object):
                 return False
             elif not ranks[3] + 1 == ranks[4]:
                 return False
+
         return ranks[4]
 
     # Function to check if the player has a four of a kind
@@ -115,3 +121,4 @@ class Analyzer(object):
             return True
         else:
             return False
+

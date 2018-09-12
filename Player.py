@@ -1,7 +1,7 @@
 from Deck import *
+
+
 # Player class, holds player name, chips and hand
-
-
 class Player(object):
     def __init__(self):
         self.name = self.get_player_name()
@@ -39,8 +39,9 @@ class Player(object):
     # Adds winnings to current player's chips
     def winnings(self, winnings):
         return self.credits + winnings
-        return self.credits + winnings
 
     # Count all the cards in player's hands
     def card_count(self):
         return len(self.hand)
+
+
