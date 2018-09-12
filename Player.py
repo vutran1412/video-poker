@@ -1,3 +1,7 @@
+class Player(object):
+    def __init__(self, name, chips):
+        self.name = name
+        self.chips = chips
 
 
 # Get the number of players playing the game
@@ -31,3 +35,14 @@ def add_players(num_of_players):
         players.append(name)
     return players
 
+
+def set_money():
+    return 2000
+
+
+def add_chips(players):
+    money = set_money()
+    players_with_money = {}
+    for player in players:
+        players_with_money[player] = money
+    return players_with_money

@@ -18,7 +18,8 @@ class Card(object):
         else:
             rank = self.rank
 
-        print("{} {}".format(rank, self.suit))
+        print("|{} {}|".format(rank, self.suit))
+
 
 class Deck(object):
     def __init__(self):
@@ -46,13 +47,8 @@ class Deck(object):
             rand = random.randint(0, i)
             self.cards[i], self.cards[rand] = self.cards[rand], self.cards[i]
 
-
     def draw(self):
         return self.cards.pop()
-
-
-
-
 
 
 deck = Deck()
