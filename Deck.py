@@ -28,11 +28,10 @@ class Deck(object):
 
     # generate 52 cards
     def build(self):
-        for suit in [  u"\N{BLACK SPADE SUIT}",
-                    u"\N{BLACK HEART SUIT}",
-                    u"\N{BLACK DIAMOND SUIT}",
-                    u"\N{BLACK CLUB SUIT}",
-                    ]:
+        for suit in [u"\N{BLACK SPADE SUIT}",
+                     u"\N{BLACK HEART SUIT}",
+                     u"\N{BLACK DIAMOND SUIT}",
+                     u"\N{BLACK CLUB SUIT}"]:
                     for rank in range(1, 14):
                         self.cards.append(Card(suit, rank))
 
