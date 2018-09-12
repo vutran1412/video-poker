@@ -6,19 +6,19 @@ class Card(object):
         self.suit = suit
         self.rank = rank
 
-    def show(self):
+    def __repr__(self):
         if self.rank == 11:
-            rank = "Jack"
+            rank = "J"
         elif self.rank == 12:
-            rank = "Queen"
+            rank = "Q"
         elif self.rank == 13:
-            rank = "King"
+            rank = "K"
         elif self.rank == 14:
-            rank = "Ace"
+            rank = "A"
         else:
             rank = self.rank
 
-        print("|{} {}|".format(rank, self.suit))
+        return "|{} {}|".format(rank, self.suit)
 
 
 class Deck(object):
@@ -52,5 +52,3 @@ class Deck(object):
 
 deck = Deck()
 deck.shuffle()
-card = deck.draw()
-card.show()
