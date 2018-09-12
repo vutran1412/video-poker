@@ -6,18 +6,19 @@ class Card(object):
         self.rank = rank
 
     def show(self):
-        if self.rank == 1:
-            rank = "Ace"
-        elif self.rank == 11:
-            rank = "Jack"
+        if self.rank == 11:
+            rank = "J"
         elif self.rank == 12:
-            rank = "Queen"
+            rank = "Q"
         elif self.rank == 13:
-            rank = "King"
+            rank = "K"
+        elif self.rank == 14:
+            rank = "A"
         else:
             rank = self.rank
 
         print("{} {}".format(rank, self.suit))
+
 
 class Deck(object):
     def __init__(self):

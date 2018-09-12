@@ -1,3 +1,5 @@
+# Preliminary Card class, not used
+
 class Card:
     # Card ranks
     RANKS = [
