@@ -25,6 +25,7 @@ def main():
     print()
     # Get all the user inputs and create the player object
     player_1 = Player()
+    player_1.add_chips()
     # Loop condition
     quit_game = False
     while not quit_game:
@@ -41,7 +42,7 @@ def main():
         player_1.show_hand()
         print()
         # Place bet
-        player_1.place_bet()
+        player_1.credits = player_1.place_bet()
 
         # Loop condition
         valid_input = False
@@ -74,7 +75,7 @@ def main():
                     print(e)
         print("\n\n")
         player_1.show_hand()
-
+        print("\n\n")
         # Checks the player's hand against every possible hand
         # These functions were tested in test.py
         player_hand = Analyzer(player_1.hand)
@@ -130,7 +131,7 @@ def main():
             print("+5")
             winnings = 5
         # Pay the player
-        player_1.winnings(winnings)
+        player_1.credits = player_1.winnings(winnings)
         # empty hand
         player_1.hand = []
     print("\n\n\n\n\n\n")

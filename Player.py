@@ -7,7 +7,7 @@ from Deck import *
 class Player(object):
     def __init__(self):
         self.name = self.get_player_name()
-        self.credits = self.add_chips()
+        self.credits = 0
         self.hand = []
 
     # Function to store player name
