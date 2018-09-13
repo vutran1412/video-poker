@@ -21,8 +21,6 @@ from Deck import *
 pair_test = [Card(1, 11), Card(2, 11), Card(1, 9), Card(1, 2), Card(1, 14)]
 analyzer = Analyzer(pair_test)
 
-
-
 straight = analyzer.straight()
 flush = analyzer.flush()
 highest_count = analyzer.highest_card_count()

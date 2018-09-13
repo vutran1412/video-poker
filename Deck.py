@@ -1,3 +1,5 @@
+# Video Poker
+# Author: Dreyeke Boone and Vu Tran
 import random
 
 
@@ -50,5 +52,3 @@ class Deck(object):
         return self.cards.pop()
 
 
-deck = Deck()
-deck.shuffle()

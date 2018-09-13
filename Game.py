@@ -32,7 +32,6 @@ def main():
         # Create the deck object and shuffle the cards
         deck = Deck()
         deck.shuffle()
-
         # Deal the player 5 cards
         for i in range(5):
             player_1.add_cards(deck.draw())
@@ -71,6 +70,8 @@ def main():
                         player_1.hand[user_input - 1] = deck.draw()
                     # End the loop if everything checks out
                     valid_input = True
+                except ValueError:
+                    print("Card selections must be in numerals")
                 except Exception as e:
                     print(e)
         print("\n\n")
