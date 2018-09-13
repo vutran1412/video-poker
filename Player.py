@@ -1,3 +1,5 @@
+# Video Poker
+# Author: Dreyke Boone and Vu Tran
 from Deck import *
 
 
@@ -18,7 +20,7 @@ class Player(object):
         self.credits = int(input("How much money would you like to play with?\n"))
         return self.credits
 
-    # Function to store player information
+    # Function to show player information
     def __str__(self):
         return "Player: " + self.name + "\tCredits: " + str(self.credits)
 
@@ -28,8 +30,8 @@ class Player(object):
             print(i, end=" ")
 
     # Add cards to hand
-    def add_cards(self, cards):
-        return self.hand.append(cards)
+    def add_cards(self, card):
+        return self.hand.append(card)
 
     # Places a bet
     def place_bet(self):
