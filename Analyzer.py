@@ -1,3 +1,5 @@
+# Video Poker
+# Author: Dreyke Boone and Vu Tran
 from Deck import *
 
 

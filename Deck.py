@@ -21,7 +21,6 @@ class Card(object):
         return "|{} {}|".format(rank, self.suit)
 
 
-
 class Deck(object):
     def __init__(self):
         self.cards = []
